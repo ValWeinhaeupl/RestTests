@@ -8,6 +8,10 @@ import javax.persistence.*;
         @NamedQuery(
                 name = "findByVandNname",
                 query = "select p from Player p where p.nname = :NNAME and p.vname = :VNAME"
+        ),
+        @NamedQuery(
+                name = "findAll",
+                query = "select p from Player p"
         )
 }
 )
@@ -63,6 +67,8 @@ public class Player {
     public void setVerein(String verein) {
         this.verein = verein;
     }
+
+
 
     @Override
     public String toString() {

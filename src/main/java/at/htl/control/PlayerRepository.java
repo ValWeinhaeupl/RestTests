@@ -31,4 +31,8 @@ public class PlayerRepository {
                 .setParameter("NNAME", nname);
         return query.getResultList();
     }
+
+    public List<Player> findAll() {
+        return em.createNamedQuery("findAll", Player.class).getResultList();
+    }
 }

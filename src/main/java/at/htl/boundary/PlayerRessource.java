@@ -41,4 +41,10 @@ public class PlayerRessource {
     ){
        return playerRepository.findByVandNname(vname, nname);
     }
+
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<Player> getAll(){
+        return playerRepository.findAll();
+    }
 }
