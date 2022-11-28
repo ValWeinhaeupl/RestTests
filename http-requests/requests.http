@@ -1,0 +1,14 @@
+POST http://localhost:8080/api/player
+Content-Type: application/json
+
+{
+"vname": "valentin",
+  "nname": "weinh",
+  "verein": "utc raab"
+}
+
+###
+GET http://localhost:8080/api/player/1
+
+###
+GET http://localhost:8080/api/player/firstandlast?vname=valentin&nname=weinh
